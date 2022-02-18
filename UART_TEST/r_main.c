@@ -55,7 +55,34 @@ unsigned char tx[3];
 unsigned char test[6]={"HELLO\n"};
 MD_STATUS g_uart3_tx_end = 0U;
 
+char seven_segment_data[17] = {	0b1111110,	// '0'
+		    	0b0110000,	// '1'	
+		   	0b1101101,	// '2'
+			0b1111001,	// '3'
+			0b0110011,	// '4'
+			0b1011011,	// '5'
+			0b0000000,	// '6'
+			0b0000000,	// '7'
+			0b0000000,	// '8'
+			0b0000000,	// '9'
+			0b0000000,	// 'a'
+			0b0000000,	// 'b'
+			0b0000000,	// 'c'
+			0b0000000,	// 'd'
+			0b0000000,	// 'e'
+			0b0000000,	// 'f'
+			0b0000000 	// '-'
+
+};	
+
 void counting_task(void);
+void uart_transmit_task(void);
+void uart_receive_task(void);
+void led_display_task(void);
+void key_read_task(void);
+void main_task(void);
+
+void seven_segment_driver(char input);
 /* End user code. Do not edit comment generated here */
 void R_MAIN_UserInit(void);
 
@@ -73,8 +100,7 @@ void main(void)
     R_UART3_Start();
     R_UART2_Start();
     i=0;
-    
-    
+     
     tx[1]='\r';
     tx[2]='\n';
     
@@ -126,4 +152,73 @@ void counting_task (void)
 	
 
 }
+
+
+void uart_transmit_task(void)
+{
+
+}
+
+void uart_receive_task(void)
+{
+
+}
+
+void led_display_task(void)
+{
+	
+}
+
+void key_read_task(void)
+{
+	
+}
+
+
+void main_task(void)
+{
+
+}
+
+
+void seven_segment_driver(char input)
+{
+	if(input&0b0000001){
+		
+	}else{
+	}
+	
+	if(input&0b0000010){
+		
+	}else{
+	}
+	
+	if(input&0b0000100){
+		
+	}else{
+	}
+	
+	if(input&0b0001000){
+		
+	}else{
+	}
+	
+	
+	if(input&0b0010000){
+		
+	}else{
+	}
+	
+	
+	if(input&0b0100000){
+		
+	}else{
+	}
+	
+	if(input&0b1000000){
+		
+	}else{
+	}
+}
+
 /* End user code. Do not edit comment generated here */

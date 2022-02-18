@@ -34,5 +34,16 @@ User definitions
 ***********************************************************************************************************************/
 
 /* Start user code for function. Do not edit comment generated here */
+
+#define pin_a  P0_bit.no0
+#define pin_b  P0_bit.no0
+#define pin_c  P0_bit.no0
+#define pin_d  P0_bit.no0
+#define pin_e  P0_bit.no0
+#define pin_f  P0_bit.no0
+#define pin_g  P0_bit.no0
+#define pin_digit1 P0_bit.no0
+#define pin_digit2 P0_bit.no0
+
 /* End user code. Do not edit comment generated here */
 #endif

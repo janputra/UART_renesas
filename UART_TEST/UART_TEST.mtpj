@@ -3721,7 +3721,7 @@
     &lt;PIOR4Value Name="PIOR4Value" Text="0" /&gt;
     &lt;PIOR5Value Name="PIOR5Value" Text="0" /&gt;
     &lt;ProjectName Name="PrjName" Text="UART_TEST" /&gt;
-    &lt;ProjectPath Name="PrjPath" Text="C:\Users\Jan\Documents\Renesas Practice\UART_TEST" /&gt;
+    &lt;ProjectPath Name="PrjPath" Text="C:\Users\Jan\Documents\Renesas Practice\UART\UART_TEST" /&gt;
     &lt;ProjectKind Name="PrjKind" Text="Project78K0R" /&gt;
     &lt;DeviceName Name="DeviceName" Fixed="" Text="RL78G13" /&gt;
     &lt;MCUName Name="MCUName" Text="RL78G13_80pin" /&gt;
@@ -5100,25 +5100,25 @@
     &lt;/FUNC&gt;
     &lt;TAG&gt;
       &lt;GlobleUserTag&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_security9 Name="cg_security9" Value="00" /&gt;
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
+        &lt;ocdstart Name="ocdstart" Value="3FE00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
-        &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" /&gt;
         &lt;clock_option Name="clock_option" Value="E8" /&gt;
+        &lt;lvi_option Name="lvi_option" Value="F3" /&gt;
         &lt;pior_value Name="pior_value" Value="00" /&gt;
         &lt;cg_option Name="cg_option" Value="84" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
-        &lt;ocdstart Name="ocdstart" Value="3FE00" /&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
-        &lt;lvi_option Name="lvi_option" Value="F3" /&gt;
+        &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" /&gt;
         &lt;wdt_option Name="wdt_option" Value="EF" /&gt;
         &lt;rrm Name="rrm" Value="3FE00" /&gt;
       &lt;/GlobleUserTag&gt;
@@ -5156,7 +5156,7 @@
     &lt;/ADC&gt;
     &lt;TAU SetFlag="True" HelpID="timer" NeedRefresh="False"&gt;
       &lt;TAU0 Accelerate="No" MacroName="TAU" Channel="0" ChannelNum="0,1,2,3,4,5,6,7" SetFlag="True" TabEnable="True" /&gt;
-      &lt;TAU1 Accelerate="No" Chip="RL78G13_80pin,RL78G13_100pin" MacroName="TAU" Channel="1" ChannelNum="0,1,2,3" TabEnable="True" SetFlag="True" /&gt;
+      &lt;TAU1 Accelerate="No" Chip="RL78G13_80pin,RL78G13_100pin" MacroName="TAU" Channel="1" ChannelNum="0,1,2,3" SetFlag="True" TabEnable="True" /&gt;
     &lt;/TAU&gt;
     &lt;WDT Prepared="true" SetFlag="False" HelpID="watchdogtimer" NeedRefresh="False"&gt;
       &lt;WDT SetFlag="False" MacroName="WDT" /&gt;
@@ -6159,7 +6159,6 @@
 &lt;/RL78G13&gt;</CodeGenerator>
       <FormatVersion>1.0</FormatVersion>
       <ToolGUID>f16ec510-c4bc-4460-90bd-fbed8490f60b</ToolGUID>
-      <CodeGeneratorItem>718f6de5-1ecf-4fc2-bc55-0b1bb147159f</CodeGeneratorItem>
     </Instance>
   </Class>
   <Class Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">
