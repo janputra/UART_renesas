@@ -23,7 +23,7 @@
 * Device(s)    : R5F100MJ
 * Tool-Chain   : CCRL
 * Description  : This file includes user definition.
-* Creation Date: 2022-02-18
+* Creation Date: 2022-02-22
 ***********************************************************************************************************************/
 
 #ifndef _USER_DEF_H
@@ -34,16 +34,39 @@ User definitions
 ***********************************************************************************************************************/
 
 /* Start user code for function. Do not edit comment generated here */
+#define KEY1 P12_bit.no4
+#define KEY2 P12_bit.no3
+#define LED  P10_bit.no0
 
-#define pin_a  P0_bit.no0
-#define pin_b  P0_bit.no0
-#define pin_c  P0_bit.no0
-#define pin_d  P0_bit.no0
-#define pin_e  P0_bit.no0
-#define pin_f  P0_bit.no0
-#define pin_g  P0_bit.no0
-#define pin_digit1 P0_bit.no0
-#define pin_digit2 P0_bit.no0
+#define EVENT_NO_ENTRY 0
+#define EVENT_KEY1_PRESSED 1
+#define EVENT_KEY2_PRESSED 2
+#define EVENT_KEY1_RELEASED 3
+#define EVENT_KEY2_RELEASED 4
+#define EVENT_UART2_RX 5
+#define EVENT_UART3_RX 6
+
+
+#define STATE_IDLE 0
+#define STATE_TX 1
+#define STATE_RX 2
+//#define STATE_IDLE 2
+//#define STATE_IDLE 3
+//#define STATE_IDLE 4
+
+#define KEY_PRESSED 0b1100     // 
+#define KEY_RELEASED 0b0011
+
+#define pin_a  P14_bit.no7
+#define pin_b  P11_bit.no0
+#define pin_c  P5_bit.no4
+#define pin_d  P5_bit.no5
+//#define pin_d  P0_bit.no3
+#define pin_e  P14_bit.no6
+#define pin_f  P1_bit.no0
+#define pin_g  P11_bit.no1
+#define pin_digit1 P0_bit.no3
+#define pin_digit2 P0_bit.no2
 
 /* End user code. Do not edit comment generated here */
 #endif

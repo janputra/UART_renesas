@@ -23,7 +23,7 @@
 * Device(s)    : R5F100MJ
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for PORT module.
-* Creation Date: 2022-02-18
+* Creation Date: 2022-02-22
 ***********************************************************************************************************************/
 
 #ifndef PORT_H

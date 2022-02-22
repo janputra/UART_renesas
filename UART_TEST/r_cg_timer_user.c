@@ -23,7 +23,7 @@
 * Device(s)    : R5F100MJ
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for TAU module.
-* Creation Date: 2022-02-18
+* Creation Date: 2022-02-22
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -40,7 +40,6 @@ Pragma directive
 ***********************************************************************************************************************/
 #pragma interrupt r_tau0_channel0_interrupt(vect=INTTM00)
 #pragma interrupt r_tau0_channel1_interrupt(vect=INTTM01)
-#pragma interrupt r_tau1_channel0_interrupt(vect=INTTM10)
 /* Start user code for pragma. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
 
@@ -48,7 +47,8 @@ Pragma directive
 Global variables and functions
 ***********************************************************************************************************************/
 /* Start user code for global. Do not edit comment generated here */
-unsigned char f_timer_500ms=0;
+unsigned char f_timer_10ms=0;
+unsigned char f_timer_100us=0;
 /* End user code. Do not edit comment generated here */
 
 /***********************************************************************************************************************
@@ -60,7 +60,7 @@ unsigned char f_timer_500ms=0;
 static void __near r_tau0_channel0_interrupt(void)
 {
     /* Start user code. Do not edit comment generated here */
-    f_timer_500ms=1;
+     f_timer_10ms=1;
     /* End user code. Do not edit comment generated here */
 }
 
@@ -73,18 +73,7 @@ static void __near r_tau0_channel0_interrupt(void)
 static void __near r_tau0_channel1_interrupt(void)
 {
     /* Start user code. Do not edit comment generated here */
-    /* End user code. Do not edit comment generated here */
-}
-
-/***********************************************************************************************************************
-* Function Name: r_tau1_channel0_interrupt
-* Description  : This function is INTTM10 interrupt service routine.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-static void __near r_tau1_channel0_interrupt(void)
-{
-    /* Start user code. Do not edit comment generated here */
+    f_timer_100us=1;
     /* End user code. Do not edit comment generated here */
 }
 
