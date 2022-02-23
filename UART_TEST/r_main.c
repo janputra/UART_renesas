@@ -131,34 +131,15 @@ void main(void)
     LED=1;
     digit1=9;
     digit2=0;
-    
-    
-    /*
-    pin_a =0;
-    pin_b =0;
-    pin_c =1;
-    pin_d =0;
-    pin_e =0;
-    pin_f =0;
-    pin_g =0;
-    */
-    //seven_segment_driver(seven_segment_data[15]);
-        
+           
     while (1U)
     {
 	     task_timer();
 	     led_display_task();
 	     key_read_task();
-	     //uart_transmit_task();
+	     uart_transmit_task();
 	     //uart_receive_task();
-	     main_task();
-	   
-	   /*
-       
-	   
-	   
-	   
-	    */			
+	     main_task();	
 	
     }
     /* End user code. Do not edit comment generated here */
@@ -205,9 +186,17 @@ void uart_transmit_task(void)
 	if(!f_timer_500ms) return;  		 // Checking if 30 ms counting is done
 	f_timer_500ms =0; 
 	
-	if(uart_tx1_flag) {  		 	
 	
-		R_UART2_Send(&tx_buffer1[p_tx1],1);
+	
+	
+	if(uart_tx1_flag) {  		 	
+		
+		digit1++;
+		if (digit1>9){
+		  	digit1=0;
+		}
+		
+		g_uart3_tx_end=R_UART2_Send(&tx_buffer1[p_tx1],1);
 	
 		p_tx1++;
 		if(p_tx1>9)
@@ -217,9 +206,14 @@ void uart_transmit_task(void)
 		}
 	}
 	
-	if(uart_tx2_flag) {  		 	
+	if(uart_tx2_flag) {  
+		
+		if (digit2==0){
+	  digit2=10;
+	}
+	digit2--;
 	
-	R_UART3_Send(&tx_buffer2[p_tx2],1);
+	g_uart3_tx_end=R_UART3_Send(&tx_buffer2[p_tx2],1);
 	
 	p_tx2++;
 	if(p_tx2>5)
@@ -282,7 +276,7 @@ void task_timer(void)
 	{
 		d_timer_500ms=0;
 		f_timer_500ms=1;// assign "0" to repeat counting
-		//setEvent(EVENT_TIMER_500MS);	// Set flag to inform LED interval timer is done counting	
+		
 	}
 	
 }
@@ -343,16 +337,16 @@ void main_task(void)
 			
 					case EVENT_KEY1_PRESSED:
 						
-						//uart_tx1_flag=0;
+						uart_tx1_flag=1;
 						state = STATE_TX;
 						break;
 						
 					case EVENT_KEY2_PRESSED:
 						
-						//uart_tx2_flag=0;
+						uart_tx2_flag=1;
 						state = STATE_TX;
 						break;
-					/*	
+						
 					case EVENT_UART2_RX:
 						flag_state_tx=0;
 						state = STATE_RX;
@@ -362,10 +356,8 @@ void main_task(void)
 						flag_state_tx=0;
 						state = STATE_RX;
 						break;
-						
-					default: 
-						break;
-					*/;
+					
+					
 			
 			}	
 			
@@ -380,16 +372,16 @@ void main_task(void)
 				
 					case EVENT_KEY1_RELEASED:
 						
-						//uart_tx1_flag=0;
+						uart_tx1_flag=0;
 						state = STATE_IDLE;
 						break;
 						
 					case EVENT_KEY2_RELEASED:
 						
-						//uart_tx2_flag=0;
+						uart_tx2_flag=0;
 						state = STATE_IDLE;
 						break;
-					/*	
+						
 					case EVENT_UART2_RX:
 						flag_state_tx=1;
 						state = STATE_RX;
@@ -399,14 +391,14 @@ void main_task(void)
 						flag_state_tx=1;
 						state = STATE_RX;
 					break;
-					*/	
+						
 					
 				}
 			
 			
-			counting_task();
+			
 			break;
-		/*	
+			
 		case STATE_RX:
 			
 			if(event==EVENT_UART2_RX){
@@ -431,7 +423,7 @@ void main_task(void)
 		
 			break;
 		
-		*/
+		
 	}
 	
 	
