@@ -64,6 +64,8 @@ extern unsigned char rx_buffer1[64];
 extern unsigned char rx_buffer2[64];
 extern unsigned char rx1_rp,rx1_wp;
 extern unsigned char rx2_rp,rx2_wp;
+unsigned char flag_rx1;
+unsigned char flag_rx2;
 /* End user code. Do not edit comment generated here */
 
 
@@ -219,14 +221,15 @@ static void r_uart3_callback_error(uint8_t err_type)
 ***********************************************************************************************************************/
 static void __near r_uart2_interrupt_receive(void)
 {
+	/*
     
      rx_buffer1[rx1_wp] = RXD2;
      rx1_wp++;
      if(rx1_wp>63){
     	rx1_wp=0;
-     }
+     }*/
 	
-   
+   flag_rx1=1;
 }
 
 /***********************************************************************************************************************
@@ -237,10 +240,13 @@ static void __near r_uart2_interrupt_receive(void)
 ***********************************************************************************************************************/
 static void __near r_uart3_interrupt_receive(void)
 {
+	/*
    rx_buffer2[rx2_wp] = RXD3;
     rx2_wp++;
     if(rx2_wp>63){
     	rx2_wp=0;
-    }
+    }*/
+    
+   flag_rx2=1;
 }
 /* End user code. Do not edit comment generated here */

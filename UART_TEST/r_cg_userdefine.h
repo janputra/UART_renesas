@@ -57,14 +57,14 @@ User definitions
 #define KEY_PRESSED 0b1100     // 
 #define KEY_RELEASED 0b0011
 
-#define pin_a  P14_bit.no7
-#define pin_b  P11_bit.no0
-#define pin_c  P5_bit.no4
-#define pin_d  P5_bit.no5
+#define pin_a  P11_bit.no1
+#define pin_e  P11_bit.no0
+#define pin_b  P5_bit.no4
+#define pin_g  P5_bit.no5
 //#define pin_d  P0_bit.no3
-#define pin_e  P14_bit.no6
-#define pin_f  P1_bit.no0
-#define pin_g  P11_bit.no1
+#define pin_f  P14_bit.no6
+#define pin_d  P1_bit.no0
+#define pin_c   P14_bit.no7
 #define pin_digit1 P0_bit.no3
 #define pin_digit2 P0_bit.no2
 

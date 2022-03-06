@@ -1,9 +1,9 @@
 ﻿<CubeSuiteProject>
-  <ProductVersion>9.06.00.00</ProductVersion>
+  <ProductVersion>9.07.00.00</ProductVersion>
   <Class Guid="68f4a651-b9cd-473b-a595-b00447132ffa">
     <Instance Guid="00000000-0000-0000-0000-000000000000">
       <FormatVersion>2.0</FormatVersion>
-      <FileVersion>9.6</FileVersion>
+      <FileVersion>9.7</FileVersion>
       <ProjectGuid>35f8ffc9-d46c-4f0e-b708-9f3d5d7ca72d</ProjectGuid>
       <ProjectItemGuid>6c17c838-ebf5-4b60-99e0-d853cdc28440</ProjectItemGuid>
       <FileCategoryGuid>7e516032-fd51-40de-ae3c-bd970246942e</FileCategoryGuid>
@@ -151,6 +151,7 @@
   </Class>
   <Class Guid="fb98844b-2c27-4275-9804-f6e63e204da0">
     <Instance Guid="fb98844b-2c27-4275-9804-f6e63e204da0">
+      <TypeOfStorageOfUserSettings>UserMtudFile</TypeOfStorageOfUserSettings>
       <UseStandardLicenseOnly>True</UseStandardLicenseOnly>
       <MemoCount>0</MemoCount>
     </Instance>
@@ -188,7 +189,7 @@
   </Class>
   <Class Guid="1159186b-b838-4741-8324-8293bf3d5c5f">
     <Instance Guid="1159186b-b838-4741-8324-8293bf3d5c5f">
-      <DataFormatVersion>1.3</DataFormatVersion>
+      <DataFormatVersion>1.4</DataFormatVersion>
       <BuildModeCount>1</BuildModeCount>
       <BuildMode0>RABlAGYAYQB1AGwAdABCAHUAaQBsAGQA</BuildMode0>
       <BatchBuildFlag0>False</BatchBuildFlag0>
@@ -274,7 +275,7 @@
       <LibOptionLibraryRuntime-DefaultValue>False</LibOptionLibraryRuntime-DefaultValue>
       <LinkOptionLibraryRuntime-DefaultValue>True</LinkOptionLibraryRuntime-DefaultValue>
       <IsLockedByUser>False</IsLockedByUser>
-      <TimeTagModified--0>-8585573112460962445</TimeTagModified--0>
+      <TimeTagModified--0>-8585550556460592912</TimeTagModified--0>
       <BuildMode-0>DefaultBuild</BuildMode-0>
       <Memo-0 />
       <OutputMessageFormat-0>%TargetFiles%</OutputMessageFormat-0>
@@ -302,7 +303,7 @@
       <GeneralOptionObjPath-0>%BuildModeName%</GeneralOptionObjPath-0>
       <TemporaryFolder-0 />
       <GeneralOptionOtherAdditionalOptions-0 />
-      <LastCompilerVersion-0>V1.10.00</LastCompilerVersion-0>
+      <LastCompilerVersion-0>V1.11.00</LastCompilerVersion-0>
     </Instance>
     <Instance Guid="86bebc9e-2f6f-4e72-83c8-8883e6cf6d33">
       <COptionAsmPath-DefaultValue>False</COptionAsmPath-DefaultValue>
@@ -717,11 +718,12 @@
       <HexOptionFixRecordLengthAndAlign-DefaultValue>False</HexOptionFixRecordLengthAndAlign-DefaultValue>
       <HexOptionChangeMessageWarningNumber-DefaultValue />
       <HexOptionFixRecordLengthAndAlignValue-DefaultValue>1</HexOptionFixRecordLengthAndAlignValue-DefaultValue>
-      <HexOptionByteCount-DefaultValue>False</HexOptionByteCount-DefaultValue>
       <HexOptionChangeMessageError-DefaultValue>None</HexOptionChangeMessageError-DefaultValue>
+      <HexOptionFixRecordLengthAndAlignValue2-DefaultValue>1</HexOptionFixRecordLengthAndAlignValue2-DefaultValue>
       <HexOptionVerboseCrc-DefaultValue>False</HexOptionVerboseCrc-DefaultValue>
-      <HexOptionByteCountValue-DefaultValue>FF</HexOptionByteCountValue-DefaultValue>
+      <HexOptionByteCount-DefaultValue>False</HexOptionByteCount-DefaultValue>
       <HexOptionChangeMessageErrorNumber-DefaultValue />
+      <HexOptionByteCountValue-DefaultValue>FF</HexOptionByteCountValue-DefaultValue>
       <HexOptionEndRecord-DefaultValue>None</HexOptionEndRecord-DefaultValue>
       <HexOptionS9-DefaultValue>False</HexOptionS9-DefaultValue>
       <IsLockedByUser>False</IsLockedByUser>
@@ -753,11 +755,12 @@
       <HexOptionFixRecordLengthAndAlign-0>False</HexOptionFixRecordLengthAndAlign-0>
       <HexOptionChangeMessageWarningNumber-0 />
       <HexOptionFixRecordLengthAndAlignValue-0>1</HexOptionFixRecordLengthAndAlignValue-0>
-      <HexOptionByteCount-0>False</HexOptionByteCount-0>
       <HexOptionChangeMessageError-0>None</HexOptionChangeMessageError-0>
+      <HexOptionFixRecordLengthAndAlignValue2-0>1</HexOptionFixRecordLengthAndAlignValue2-0>
       <HexOptionVerboseCrc-0>False</HexOptionVerboseCrc-0>
-      <HexOptionByteCountValue-0>FF</HexOptionByteCountValue-0>
+      <HexOptionByteCount-0>False</HexOptionByteCount-0>
       <HexOptionChangeMessageErrorNumber-0 />
+      <HexOptionByteCountValue-0>FF</HexOptionByteCountValue-0>
       <HexOptionEndRecord-0>None</HexOptionEndRecord-0>
       <HexOptionS9-0>False</HexOptionS9-0>
     </Instance>
@@ -1561,7 +1564,6 @@
       <DebuggerProperty-HookProperty-HookTransaction-Broke-Length>0</DebuggerProperty-HookProperty-HookTransaction-Broke-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Connected-Length>0</DebuggerProperty-HookProperty-HookTransaction-Connected-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>0</DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>
-      <DebuggerProperty-EssentialProperty-EmulatorConnect-SerialNumber />
     </Instance>
   </Class>
   <Class Guid="9f7af90c-526c-4f28-af29-524df208b9e0">
@@ -3444,9 +3446,9 @@
       <KEY_SAVE_ALLOCATED_FCUNTION_COLLECTION56>56,P111</KEY_SAVE_ALLOCATED_FCUNTION_COLLECTION56>
       <KEY_SAVE_DEVICE_PIN_LIST_ZOOM>100</KEY_SAVE_DEVICE_PIN_LIST_ZOOM>
       <KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>0:78:78,1:77:77,2:230:230,3:61:61,4:40:40,5:50:50,6:160:160,7:210:210,8:239:239,9:210:210,10:100:100</KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>
-      <KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>0:112:112,1:245:245,2:42:42,3:44:44,4:121:121,5:132:132,6:97:85</KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>
+      <KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>0:112:112,1:245:245,2:42:42,3:44:44,4:121:121,5:132:132,6:85:85</KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>
       <KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>0:112:112,1:77:77,2:77:77,3:230:230,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:239:239,10:210:210,11:100:100</KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>
-      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>0:112:112,1:100:100,2:43:43,3:169:150</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>
+      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>0:112:112,1:100:100,2:43:43,3:150:150</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>
       <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>0:112:112,1:78:78,2:77:77,3:230:230,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:239:239,10:210:210</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>
     </Instance>
     <Instance Guid="aacae7da-f24b-4709-81fa-541016e73641">
@@ -3721,7 +3723,7 @@
     &lt;PIOR4Value Name="PIOR4Value" Text="0" /&gt;
     &lt;PIOR5Value Name="PIOR5Value" Text="0" /&gt;
     &lt;ProjectName Name="PrjName" Text="UART_TEST" /&gt;
-    &lt;ProjectPath Name="PrjPath" Text="C:\Users\Jan\Documents\Renesas Practice\UART\UART_TEST" /&gt;
+    &lt;ProjectPath Name="PrjPath" Text="Z:\UART_renesas\UART_TEST" /&gt;
     &lt;ProjectKind Name="PrjKind" Text="Project78K0R" /&gt;
     &lt;DeviceName Name="DeviceName" Fixed="" Text="RL78G13" /&gt;
     &lt;MCUName Name="MCUName" Text="RL78G13_80pin" /&gt;
@@ -5100,6 +5102,7 @@
     &lt;/FUNC&gt;
     &lt;TAG&gt;
       &lt;GlobleUserTag&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_security9 Name="cg_security9" Value="00" /&gt;
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
@@ -5109,14 +5112,13 @@
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
         &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" /&gt;
         &lt;clock_option Name="clock_option" Value="E8" /&gt;
-        &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;pior_value Name="pior_value" Value="00" /&gt;
         &lt;cg_option Name="cg_option" Value="84" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
         &lt;ocdstart Name="ocdstart" Value="3FE00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;lvi_option Name="lvi_option" Value="F3" /&gt;
         &lt;wdt_option Name="wdt_option" Value="EF" /&gt;
@@ -5444,27 +5446,6 @@
           &lt;setting name="Reveive_Data_Level" value="Normal" /&gt;
           &lt;setting name="Receive_error_interrupt" value="not used" /&gt;
         &lt;/Both_UART3&gt;
-        &lt;Transmit_UART3&gt;
-          &lt;setting name="Receive_data_direction" value="LSB" /&gt;
-          &lt;setting name="Receive_data_length" value="8 bits" /&gt;
-          &lt;setting name="Receive_parity" value="none" /&gt;
-          &lt;setting name="RecBaudrate" value="9600" /&gt;
-          &lt;setting name="Receive_end_callback_function" value="generated" /&gt;
-          &lt;setting name="Receive_error_callback_function" value="generated" /&gt;
-          &lt;setting name="Transfer_mode" value="single" /&gt;
-          &lt;setting name="Transmit_data_direction" value="LSB" /&gt;
-          &lt;setting name="Transmit_data_level" value="reverse" /&gt;
-          &lt;setting name="Transmit_data_length" value="8 bits" /&gt;
-          &lt;setting name="Transmit_parity" value="none" /&gt;
-          &lt;setting name="Transmit_stop_length" value="1 bit" /&gt;
-          &lt;setting name="TranBaudrate" value="9600" /&gt;
-          &lt;setting name="Transmit_end_callback_function" value="generated" /&gt;
-          &lt;setting name="Transmit_end_interrupt_priority" value="0" /&gt;
-          &lt;setting name="Receive_error_interrupt_priority" value="3" /&gt;
-          &lt;setting name="Receive_end_interrupt_priority" value="3" /&gt;
-          &lt;setting name="Reveive_Data_Level" value="Normal" /&gt;
-          &lt;setting name="Receive_error_interrupt" value="not used" /&gt;
-        &lt;/Transmit_UART3&gt;
         &lt;Receive_UART3&gt;
           &lt;setting name="Receive_data_direction" value="LSB" /&gt;
           &lt;setting name="Receive_data_length" value="8 bits" /&gt;
@@ -5486,6 +5467,27 @@
           &lt;setting name="Reveive_Data_Level" value="Normal" /&gt;
           &lt;setting name="Receive_error_interrupt" value="not used" /&gt;
         &lt;/Receive_UART3&gt;
+        &lt;Transmit_UART3&gt;
+          &lt;setting name="Receive_data_direction" value="LSB" /&gt;
+          &lt;setting name="Receive_data_length" value="8 bits" /&gt;
+          &lt;setting name="Receive_parity" value="none" /&gt;
+          &lt;setting name="RecBaudrate" value="9600" /&gt;
+          &lt;setting name="Receive_end_callback_function" value="generated" /&gt;
+          &lt;setting name="Receive_error_callback_function" value="generated" /&gt;
+          &lt;setting name="Transfer_mode" value="single" /&gt;
+          &lt;setting name="Transmit_data_direction" value="LSB" /&gt;
+          &lt;setting name="Transmit_data_level" value="reverse" /&gt;
+          &lt;setting name="Transmit_data_length" value="8 bits" /&gt;
+          &lt;setting name="Transmit_parity" value="none" /&gt;
+          &lt;setting name="Transmit_stop_length" value="1 bit" /&gt;
+          &lt;setting name="TranBaudrate" value="9600" /&gt;
+          &lt;setting name="Transmit_end_callback_function" value="generated" /&gt;
+          &lt;setting name="Transmit_end_interrupt_priority" value="0" /&gt;
+          &lt;setting name="Receive_error_interrupt_priority" value="3" /&gt;
+          &lt;setting name="Receive_end_interrupt_priority" value="3" /&gt;
+          &lt;setting name="Reveive_Data_Level" value="Normal" /&gt;
+          &lt;setting name="Receive_error_interrupt" value="not used" /&gt;
+        &lt;/Transmit_UART3&gt;
       &lt;/Channel2&gt;
       &lt;UART3 /&gt;
       &lt;Channel3&gt;
@@ -6159,7 +6161,6 @@
 &lt;/RL78G13&gt;</CodeGenerator>
       <FormatVersion>1.0</FormatVersion>
       <ToolGUID>f16ec510-c4bc-4460-90bd-fbed8490f60b</ToolGUID>
-      <CodeGeneratorItem>718f6de5-1ecf-4fc2-bc55-0b1bb147159f</CodeGeneratorItem>
     </Instance>
   </Class>
   <Class Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">

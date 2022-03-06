@@ -51,6 +51,8 @@ Global variables and functions
 unsigned char f_timer_500ms;
 extern unsigned char f_timer_100us;
 extern unsigned char f_timer_10ms;
+extern unsigned char flag_rx1;
+extern unsigned char flag_rx2;
 unsigned char f_timer_30ms;
 unsigned char i,p_tx1,p_tx2;
 unsigned char flag_digit_1;
@@ -127,18 +129,23 @@ void main(void)
     R_TAU0_Channel0_Start();
     R_TAU0_Channel1_Start();
     R_UART2_Start();
-     R_UART3_Start();
+    R_UART3_Start();
     LED=1;
     digit1=9;
     digit2=0;
-           
+  	
     while (1U)
-    {
+    {		/*
+	     task_timer();
+	     led_display_task();
+	     counting_task();
+	     */
+	    
 	     task_timer();
 	     led_display_task();
 	     key_read_task();
 	     uart_transmit_task();
-	     //uart_receive_task();
+	     uart_receive_task();
 	     main_task();	
 	
     }
@@ -190,13 +197,13 @@ void uart_transmit_task(void)
 	
 	
 	if(uart_tx1_flag) {  		 	
-		
+	/*	
 		digit1++;
 		if (digit1>9){
 		  	digit1=0;
 		}
-		
-		g_uart3_tx_end=R_UART2_Send(&tx_buffer1[p_tx1],1);
+	*/	
+		R_UART2_Send(&tx_buffer1[1],1);
 	
 		p_tx1++;
 		if(p_tx1>9)
@@ -207,13 +214,13 @@ void uart_transmit_task(void)
 	}
 	
 	if(uart_tx2_flag) {  
-		
+	/*	
 		if (digit2==0){
 	  digit2=10;
 	}
 	digit2--;
-	
-	g_uart3_tx_end=R_UART3_Send(&tx_buffer2[p_tx2],1);
+	*/
+	R_UART3_Send(&tx_buffer1[0],1);
 	
 	p_tx2++;
 	if(p_tx2>5)
@@ -225,15 +232,33 @@ void uart_transmit_task(void)
 
 void uart_receive_task(void)
 {
-	if (rx1_wp!=rx1_rp)
+	//if(!f_timer_500ms) return;  		 // Checking if 30 ms counting is done
+	//f_timer_500ms =0; 
+	
+	if (flag_rx1)
 	{
-		setEvent(EVENT_UART2_RX);
+		//setEvent(EVENT_UART2_RX);
+		flag_rx1=0;
+		digit1 = RXD2;
+		//digit1++; 
+		//if(digit1>9) 
+		// {
+		// digit1=0;
+		// }
 	}
-	if(rx2_wp!=rx2_rp)
+	if(flag_rx2)
 	{
-		setEvent(EVENT_UART3_RX);
+		//setEvent(EVENT_UART3_RX);
+		flag_rx2=0;
+		
+		digit2 = RXD3;
+		//digit2++; 
+		// if(digit2>9) 
+		// {
+		//	digit2=0;
+		// }		
 	}
-
+	
 }
 
 void led_display_task(void)
@@ -369,6 +394,9 @@ void main_task(void)
 			
 			switch(event)
 				{
+					case EVENT_NO_ENTRY:
+						
+						break;
 				
 					case EVENT_KEY1_RELEASED:
 						
@@ -384,12 +412,12 @@ void main_task(void)
 						
 					case EVENT_UART2_RX:
 						flag_state_tx=1;
-						state = STATE_RX;
+						//state = STATE_RX;
 						break;
 						
 					case EVENT_UART3_RX:
 						flag_state_tx=1;
-						state = STATE_RX;
+						//state = STATE_RX;
 					break;
 						
 					
@@ -402,17 +430,29 @@ void main_task(void)
 		case STATE_RX:
 			
 			if(event==EVENT_UART2_RX){
-				 digit1= rx_buffer1[rx1_rp];
+				/* digit1= rx_buffer1[rx1_rp];
 				 rx1_rp++;
 				 if(rx1_rp>63){
 			 		 rx1_rp=0;
-			 	 }
+			 	 }*/
+				 digit1++; 
+				 if(digit1>9) 
+				 {
+					 digit1=0;
+				 }
 			}
-			else if(event==EVENT_UART3_RX)
+			else if(event==EVENT_UART3_RX){
+				/*
 				digit2= rx_buffer2[rx2_rp];
 			   	 rx2_rp++;
     				if(rx2_rp>63){
-    					rx2_rp=0;
+    					rx2_rp=0;*/
+				digit2++; 
+				 if(digit2>9) 
+				 {
+					 digit2=0;
+				 }
+					
     				}
 			if (flag_state_tx)
 			{
