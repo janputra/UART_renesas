@@ -23,7 +23,7 @@
 * Device(s)    : R5F100MJ
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for Serial module.
-* Creation Date: 2022-02-22
+* Creation Date: 2022-03-22
 ***********************************************************************************************************************/
 
 #ifndef SERIAL_H
@@ -373,8 +373,8 @@ Macro definitions (Register bit)
 /***********************************************************************************************************************
 Macro definitions
 ***********************************************************************************************************************/
-#define _CE00_UART2_RECEIVE_DIVISOR      (0xCE00U)
-#define _CE00_UART2_TRANSMIT_DIVISOR     (0xCE00U)
+#define _CE00_UART1_RECEIVE_DIVISOR      (0xCE00U)
+#define _CE00_UART1_TRANSMIT_DIVISOR     (0xCE00U)
 #define _CE00_UART3_RECEIVE_DIVISOR      (0xCE00U)
 #define _CE00_UART3_TRANSMIT_DIVISOR     (0xCE00U)
 
@@ -385,16 +385,17 @@ Typedef definitions
 /***********************************************************************************************************************
 Global functions
 ***********************************************************************************************************************/
+void R_SAU0_Create(void);
+void R_UART1_Create(void);
+void R_UART1_Start(void);
+void R_UART1_Stop(void);
+MD_STATUS R_UART1_Send(uint8_t * const tx_buf, uint16_t tx_num);
+MD_STATUS R_UART1_Receive(uint8_t * const rx_buf, uint16_t rx_num);
+static void r_uart1_callback_error(uint8_t err_type);
+static void r_uart1_callback_receiveend(void);
+static void r_uart1_callback_sendend(void);
+static void r_uart1_callback_softwareoverrun(uint16_t rx_data);
 void R_SAU1_Create(void);
-void R_UART2_Create(void);
-void R_UART2_Start(void);
-void R_UART2_Stop(void);
-MD_STATUS R_UART2_Send(uint8_t * const tx_buf, uint16_t tx_num);
-MD_STATUS R_UART2_Receive(uint8_t * const rx_buf, uint16_t rx_num);
-static void r_uart2_callback_error(uint8_t err_type);
-static void r_uart2_callback_receiveend(void);
-static void r_uart2_callback_sendend(void);
-static void r_uart2_callback_softwareoverrun(uint16_t rx_data);
 void R_UART3_Create(void);
 void R_UART3_Start(void);
 void R_UART3_Stop(void);

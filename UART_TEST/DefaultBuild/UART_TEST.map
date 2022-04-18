@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W3.04.00 )             06-Mar-2022 23:01:09
+Renesas Optimizing Linker (W3.03.00 )             22-Mar-2022 17:18:22
 
 *** Options ***
 
@@ -21,9 +21,9 @@ Renesas Optimizing Linker (W3.04.00 )             06-Mar-2022 23:01:09
 -NOCOmpress
 -NOOPtimize
 -OUtput=DefaultBuild\UART_TEST.abs
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\rl78cm4s.lib
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\malloc_n.lib
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\rl78cm4r.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78cm4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78cm4r.lib
 -OCDBG=84
 -DEBUG_MONITOR=3FE00-3FFFF
 -USER_OPT_BYTE=EFF3E8
@@ -48,7 +48,7 @@ SECTION                            START      END         SIZE   ALIGN
 .sdata
                                   00000080  00000080         0   2
 .data
-                                  00000082  000000ad        2c   2
+                                  00000082  000000ab        2a   2
 .option_byte
                                   000000c0  000000c3         4   1
 .security_id
@@ -60,17 +60,17 @@ SECTION                            START      END         SIZE   ALIGN
 .monitor1
                                   000000ce  000000d7         a   1
 .text
-                                  000000d8  000001a3        cc   1
+                                  000000d8  000001d1        fa   1
 .textf
-                                  000001a4  00000795       5f2   1
+                                  000001d2  0000080c       63b   1
 .const
                                   00003000  00003000         0   2
 .monitor2
                                   0003fe00  0003ffff       200   1
 .bss
-                                  000faf00  000faff7        f8   2
+                                  000faf00  000fafef        f0   2
 .dataR
-                                  000faff8  000fb023        2c   2
+                                  000faff0  000fb019        2a   2
 .sbss
                                   000ffe20  000ffe20         0   2
 .sdataR
